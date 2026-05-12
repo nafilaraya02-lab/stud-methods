@@ -18,7 +18,7 @@ class CompetitionsWidget extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset(image, fit: BoxFit.contain, width: 100, height: 100),
+          Image.asset(image, fit: BoxFit.cover, width: 75, height: 65),
         ],
       ),
     );

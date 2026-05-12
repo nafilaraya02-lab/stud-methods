@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:studmethods/pages/edit_profile.dart';
+import 'package:studmethods/pages/mapel/bindo.dart';
+import 'package:studmethods/pages/mapel/bing.dart';
+import 'package:studmethods/pages/mapel/ipa.dart';
+import 'package:studmethods/pages/mapel/ips.dart';
+import 'package:studmethods/pages/mapel/math.dart';
 import 'package:studmethods/widgets/category_widget.dart';
+import 'package:studmethods/widgets/competitions_widget.dart';
 
 class RayaHomepage extends StatefulWidget {
   const RayaHomepage({super.key});
@@ -92,11 +98,51 @@ class _RayaHomepageState extends State<RayaHomepage> {
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
-                    CategoryWidget(image: "assets/matem.png"),
-                    CategoryWidget(image: "assets/bahasaindonesia.png"),
-                    CategoryWidget(image: "assets/ipa.png"),
-                    CategoryWidget(image: "assets/mat.jpg"),
-                    CategoryWidget(image: "assets/math.webp"),
+                    CategoryWidget(
+                      image: "assets/matem.png",
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Math()),
+                        );
+                      },
+                    ),
+                    CategoryWidget(
+                      image: "assets/bahasaindonesia.png",
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Bindo()),
+                        );
+                      },
+                    ),
+                    CategoryWidget(
+                      image: "assets/ipa.png",
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Ipa()),
+                        );
+                      },
+                    ),
+                    CategoryWidget(
+                      image: "assets/mat.jpg",
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Ips()),
+                        );
+                      },
+                    ),
+                    CategoryWidget(
+                      image: "assets/math.webp",
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Bing()),
+                        );
+                      },
+                    ),
                   ],
                 ),
               ),
@@ -110,10 +156,13 @@ class _RayaHomepageState extends State<RayaHomepage> {
                   child: ListView(
                     scrollDirection: Axis.vertical,
                     children: [
-                      CategoryWidget(image: "assets/olim.png"),
-                      CategoryWidget(image: "assets/olim2.jpeg"),
-                      CategoryWidget(image: "assets/olim3.jpg"),
-                      CategoryWidget(image: "assets/olim5.jpg"),
+                      CompetitionsWidget(image: "assets/olim.png"),
+                      SizedBox(height: 10),
+                      CompetitionsWidget(image: "assets/olim2.jpeg"),
+                      SizedBox(height: 10),
+                      CompetitionsWidget(image: "assets/olim3.jpg"),
+                      SizedBox(height: 10),
+                      CompetitionsWidget(image: "assets/olim5.jpg"),
                     ],
                   ),
                 ),
