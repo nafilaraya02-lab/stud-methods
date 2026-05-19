@@ -53,7 +53,7 @@ class _LoginState extends State<Login> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
-                          "WELCOME",
+                          "STUD!",
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 25,
@@ -69,7 +69,7 @@ class _LoginState extends State<Login> {
                           ),
                         ),
                         Text(
-                          "STUD! METHODs",
+                          "METHODs",
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 25,
@@ -136,13 +136,13 @@ class _LoginState extends State<Login> {
                 ElevatedButton(
                   onPressed: () {
                     if (_username.value.text == "Hi" &&
-                        _password.value.text == "hlo") {
+                        _password.value.text == "Halo") {
                       showDialog(
                         context: context,
                         builder: (context) => AlertDialog(
                           title: Text("Berhasil"),
                           content: Text(
-                            "Selamat data ${_username.text.toString()}",
+                            "Welcome ${_username.text.toString()}",
                           ),
                         ),
                       );

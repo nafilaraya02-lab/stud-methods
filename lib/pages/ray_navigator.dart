@@ -24,35 +24,31 @@ class _RayNavigatorState extends State<RayNavigator> {
     return Scaffold(
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(120),
+          color: Colors.white
         ),
-        child: Container(
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(120)),
-          child: BottomNavigationBar(
-            backgroundColor: Colors.white,
-            elevation: 5,
-            currentIndex: selectedIndex,
-            onTap: (value) {
-              setState(() {
-                selectedIndex = value;
-              });
-            },
-            items: pages2.entries.map((r) {
-              return BottomNavigationBarItem(
-                backgroundColor: Colors.white,
-                icon: Icon(r.value[2], color: Colors.grey, size: 32),
-                label: r.value[1],
-                activeIcon: Icon(
-                  r.value[2],
-                  color: Colors.black,
-                  size: 42,
-                ),
-              );
-            }).toList(),
-          ),
+        child: BottomNavigationBar(
+          elevation: 5,
+          currentIndex: selectedIndex,
+          onTap: (value) {
+            setState(() {
+              selectedIndex = value;
+            });
+          },
+          items: pages2.entries.map((r) {
+            return BottomNavigationBarItem(
+              backgroundColor: Colors.white,
+              icon: Icon(r.value[2], color: Colors.grey, size: 32),
+              label: r.value[1],
+              activeIcon: Icon(
+                r.value[2],
+                color: Colors.black,
+                size: 42,
+              ),
+            );
+          }).toList(),
         ),
       ),
-      body: pages2[selectedIndex]?[0],
+      body: pages2[selectedIndex]![0],
     );
   }
 }

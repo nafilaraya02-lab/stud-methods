@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:studmethods/pages/ray_navigator.dart';
 import 'package:studmethods/pages/raya_homepage.dart';
+import 'package:studmethods/pages/splash_screen.dart';
 
 void main() {
   runApp(Stud());

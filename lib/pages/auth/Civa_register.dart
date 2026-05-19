@@ -11,6 +11,10 @@ class CivaRegister extends StatefulWidget {
 class _CivaRegisterState extends State<CivaRegister> {
   TextEditingController _username = TextEditingController();
   TextEditingController _password = TextEditingController();
+  TextEditingController _email = TextEditingController();
+  TextEditingController _number = TextEditingController();
+
+
   bool _isObscure = true;
   IconData _isObscureIcon = Icons.remove_red_eye;
 
@@ -53,7 +57,7 @@ class _CivaRegisterState extends State<CivaRegister> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
-                          "WELCOME",
+                          "STUD!",
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 25,
@@ -69,7 +73,7 @@ class _CivaRegisterState extends State<CivaRegister> {
                           ),
                         ),
                         Text(
-                          "STUD! METHODs",
+                          "METHODs",
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 25,
@@ -127,27 +131,62 @@ class _CivaRegisterState extends State<CivaRegister> {
                   ),
                 ),
                 SizedBox(height: 20),
-                Text('Belum punya akun?'),
-                TextButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => CivaRegister()),
-                    );
-                  },
-                  child: Column(children: [Text('Register dulu ya')]),
+                TextField(
+                  controller: _email,
+                  keyboardType: TextInputType.text,
+                  obscureText: _isObscure,
+                  decoration: InputDecoration(
+                    hintText: "Email",
+                    alignLabelWithHint: true,
+                    focusColor: Colors.blue.shade900,
+                    fillColor: Colors.white70,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    suffixIcon: IconButton(
+                      icon: Icon(_isObscureIcon),
+                      onPressed: () {
+                        setState(() {
+                          isObscureText();
+                        });
+                      },
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20),
+                TextField(
+                  controller: _number,
+                  keyboardType: TextInputType.text,
+                  obscureText: _isObscure,
+                  decoration: InputDecoration(
+                    hintText: "Number",
+                    alignLabelWithHint: true,
+                    focusColor: Colors.blue.shade900,
+                    fillColor: Colors.white70,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    suffixIcon: IconButton(
+                      icon: Icon(_isObscureIcon),
+                      onPressed: () {
+                        setState(() {
+                          isObscureText();
+                        });
+                      },
+                    ),
+                  ),
                 ),
                 SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
                     if (_username.value.text == "Hi" &&
-                        _password.value.text == "hlo") {
+                        _password.value.text == "Halo") {
                       showDialog(
                         context: context,
                         builder: (context) => AlertDialog(
                           title: Text("Berhasil"),
                           content: Text(
-                            "Selamat data ${_username.text.toString()}",
+                            "Welcome ${_username.text.toString()}",
                           ),
                         ),
                       );
