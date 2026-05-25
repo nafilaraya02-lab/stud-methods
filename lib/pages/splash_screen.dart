@@ -3,14 +3,14 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:studmethods/pages/auth/civa_login.dart';
 
-class SplashChren extends StatefulWidget {
-  const SplashChren({super.key});
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
 
   @override
-  State<SplashChren> createState() => _SplashChrenState();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashChrenState extends State<SplashChren> {
+class _SplashScreenState extends State<SplashScreen> {
   late Timer t;
 
   @override

@@ -63,6 +63,7 @@ class _RayaHomepageState extends State<RayaHomepage> {
                           style: TextStyle(
                             fontSize: 22,
                             fontWeight: FontWeight.bold,
+                            color: Colors.white,
                           ),
                         ),
                         SizedBox(height: 4),
@@ -71,6 +72,7 @@ class _RayaHomepageState extends State<RayaHomepage> {
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
+                            color: Colors.white,
                           ),
                         ),
                       ],
@@ -80,12 +82,10 @@ class _RayaHomepageState extends State<RayaHomepage> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(
-                          builder: (context) => EditProfile(),
-                        ),
+                        MaterialPageRoute(builder: (context) => EditProfile()),
                       );
                     },
-                    icon: Icon(Icons.edit, color: Colors.black, size: 30),
+                    icon: Icon(Icons.edit, color: Colors.white, size: 30),
                   ),
                 ],
               ),
@@ -126,17 +126,21 @@ class _RayaHomepageState extends State<RayaHomepage> {
                 ),
               ),
             ),
+            SizedBox(height: 10),
             GridView.builder(
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
+              itemCount: comps.length,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
+                crossAxisSpacing: 12,
+                mainAxisSpacing: 12,
+                childAspectRatio: 0.8,
               ),
-              shrinkWrap: true,
-              itemCount: comps.length,
-              itemBuilder: (context, index) {
+              itemBuilder: (BuildContext context, index) {
                 return CompetitionsWidget(
                   comps: comps[index],
-                  onTap: () {
-                    Navigator.push(
+                  onTap: () {            Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) =>

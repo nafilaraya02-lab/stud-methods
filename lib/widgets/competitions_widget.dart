@@ -20,11 +20,10 @@ class CompetitionsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(bottom: 15),
       padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(25),
+        borderRadius: BorderRadius.circular(20),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -32,21 +31,28 @@ class CompetitionsWidget extends StatelessWidget {
           GestureDetector(
             onTap: () => showFullImage(BuildContext, context),
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(15),
               child: Image.asset(
                 comps.image,
                 width: double.infinity,
-                height: 180,
-                fit: BoxFit.cover,
+                height: 210,
+                fit: BoxFit.contain,
               ),
             ),
           ),
-          SizedBox(height: 16),
-          GestureDetector(
-            onTap: onTap,
-            child: Text(
-              "Detail Competition",
-              style: TextStyle(fontWeight: FontWeight.bold),
+          SizedBox(height: 10),
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              onPressed: onTap,
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.blueAccent),
+              child: GestureDetector(
+                onTap: onTap,
+                child: Text(
+                  "Detail Competition",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ),
             ),
           ),
         ],

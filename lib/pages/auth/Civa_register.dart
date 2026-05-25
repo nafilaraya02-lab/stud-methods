@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:studmethods/pages/auth/Civa_register.dart';
+import 'package:studmethods/pages/ray_navigator.dart';
 
 class CivaRegister extends StatefulWidget {
   const CivaRegister({super.key});
@@ -13,7 +14,6 @@ class _CivaRegisterState extends State<CivaRegister> {
   TextEditingController _password = TextEditingController();
   TextEditingController _email = TextEditingController();
   TextEditingController _number = TextEditingController();
-
 
   bool _isObscure = true;
   IconData _isObscureIcon = Icons.remove_red_eye;
@@ -185,9 +185,7 @@ class _CivaRegisterState extends State<CivaRegister> {
                         context: context,
                         builder: (context) => AlertDialog(
                           title: Text("Berhasil"),
-                          content: Text(
-                            "Welcome ${_username.text.toString()}",
-                          ),
+                          content: Text("Welcome ${_username.text.toString()}"),
                         ),
                       );
                     } else {
@@ -200,7 +198,15 @@ class _CivaRegisterState extends State<CivaRegister> {
                       );
                     }
                   },
-                  child: Text("Masuk", style: TextStyle(fontSize: 15)),
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => RayNavigator()),
+                      );
+                    },
+                    child: Text("Masuk", style: TextStyle(fontSize: 12)),
+                  ),
                 ),
               ],
             ),

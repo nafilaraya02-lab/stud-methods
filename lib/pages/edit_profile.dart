@@ -16,7 +16,7 @@ class _EditProfileState extends State<EditProfile> {
         centerTitle: true,
         backgroundColor: Colors.blueGrey,
         title: Container(
-          padding: EdgeInsets.symmetric(horizontal: 40, vertical: 12),
+          padding: EdgeInsets.symmetric(horizontal: 25),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(30),
@@ -48,6 +48,7 @@ class _EditProfileState extends State<EditProfile> {
                   "user@gmail.com",
                   style: TextStyle(fontSize: 27, fontWeight: FontWeight.normal),
                 ),
+                SizedBox(height: 30),
                 Container(
                   padding: EdgeInsets.all(10),
                   width: double.infinity,
@@ -64,7 +65,7 @@ class _EditProfileState extends State<EditProfile> {
                     ),
                   ),
                 ),
-                SizedBox(height: 15),
+                SizedBox(height: 25),
                 Container(
                   padding: EdgeInsets.all(10),
                   width: double.infinity,
@@ -81,7 +82,7 @@ class _EditProfileState extends State<EditProfile> {
                     ),
                   ),
                 ),
-                SizedBox(height: 15),
+                SizedBox(height: 25),
                 Container(
                   padding: EdgeInsets.all(10),
                   width: double.infinity,
@@ -98,7 +99,7 @@ class _EditProfileState extends State<EditProfile> {
                     ),
                   ),
                 ),
-                SizedBox(height: 15),
+                SizedBox(height: 25),
                 Container(
                   padding: EdgeInsets.all(10),
                   width: double.infinity,

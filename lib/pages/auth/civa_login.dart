@@ -129,7 +129,12 @@ class _LoginState extends State<Login> {
                 SizedBox(height: 20),
                 Text('Belum punya akun?'),
                 TextButton(
-                  onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => CivaRegister()));},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => CivaRegister()),
+                    );
+                  },
                   child: Column(children: [Text('Register dulu ya')]),
                 ),
                 SizedBox(height: 20),
@@ -141,9 +146,7 @@ class _LoginState extends State<Login> {
                         context: context,
                         builder: (context) => AlertDialog(
                           title: Text("Berhasil"),
-                          content: Text(
-                            "Welcome ${_username.text.toString()}",
-                          ),
+                          content: Text("Welcome ${_username.text.toString()}"),
                         ),
                       );
                     } else {

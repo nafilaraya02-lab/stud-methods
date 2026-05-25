@@ -17,6 +17,6 @@ class Stud extends StatefulWidget {
 class _StudState extends State<Stud> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: RayNavigator());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: SplashScreen());
   }
 }
