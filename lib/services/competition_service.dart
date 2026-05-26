@@ -1,4 +1,12 @@
 import 'package:studmethods/models/competitions_model.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+Future<void> launchInWebView(Uri url) async {
+  if (!await launchUrl(url, mode: LaunchMode.inAppWebView)) {
+    throw Exception('Could not launch $url');
+  }
+}
+
 
 List<CompetitionsModel> comps = [
   CompetitionsModel(
@@ -58,3 +66,4 @@ List<CompetitionsModel> comps = [
     link: "link pendaftaran: https://taplink.cc/kompas2026",
   ),
 ];
+

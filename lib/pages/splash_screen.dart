@@ -25,6 +25,12 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
   }
 
+  @override
+  void dispose() {
+    t.cancel();
+    super.dispose();
+  }
+
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(

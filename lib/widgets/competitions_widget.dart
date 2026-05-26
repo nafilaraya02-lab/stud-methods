@@ -46,12 +46,9 @@ class CompetitionsWidget extends StatelessWidget {
             child: ElevatedButton(
               onPressed: onTap,
               style: ElevatedButton.styleFrom(backgroundColor: Colors.blueAccent),
-              child: GestureDetector(
-                onTap: onTap,
-                child: Text(
-                  "Detail Competition",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
+              child: Text(
+                "Detail Competition",
+                style: TextStyle(fontWeight: FontWeight.bold),
               ),
             ),
           ),
