@@ -48,7 +48,7 @@ class CompetitionsWidget extends StatelessWidget {
               style: ElevatedButton.styleFrom(backgroundColor: Colors.blueAccent),
               child: Text(
                 "Detail Competition",
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: TextStyle(color: Colors.white),
               ),
             ),
           ),

@@ -28,6 +28,7 @@ class SubjectWidget extends StatelessWidget {
             SizedBox(height: 3),
             Text(subjects.title, style: TextStyle(fontSize: 12)),
           ],
+
         ),
       ),
     );

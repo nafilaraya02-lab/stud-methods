@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:studmethods/models/menu_model.dart';
-import 'package:studmethods/pages/jadwal.dart';
 import 'package:studmethods/pages/raya_homepage.dart';
+import 'package:studmethods/pages/schedule_page.dart';
 import 'package:studmethods/pages/settings.dart';
 
 class Menu extends StatefulWidget {
@@ -22,7 +22,7 @@ class _MenuState extends State<Menu> {
       color: Colors.white70,
     ),
     1: MenuModel(
-      page: Jadwal(),
+      page: SchedulePage(),
       icon: Icons.access_time_filled,
       label: "Schedule",
       color: Colors.white70,

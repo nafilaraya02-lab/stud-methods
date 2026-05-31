@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:studmethods/pages/jadwal.dart';
 import 'package:studmethods/pages/raya_homepage.dart';
 import 'package:studmethods/pages/schedule_page.dart';
 import 'package:studmethods/pages/settings.dart';

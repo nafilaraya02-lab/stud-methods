@@ -44,17 +44,14 @@ class _CompetitionsDetailState extends State<CompetitionsDetail> {
             ElevatedButton(
               onPressed: () {
                 launchInWebView(
-                  Uri(scheme: 'https', host: 'cbt.pusatprestasi.id'),
+                  Uri(
+                    scheme: 'https',
+                    host: widget.comps.linkPendaftaran,
+                    path: widget.comps.linkPPath,
+                  ),
                 );
-                launchInWebView(
-                  Uri(scheme: 'https', host: "linktr.ee/ISCOFFICIAL"),
-                );
-                launchInWebView(Uri(scheme: 'https', host: 'bit.ly/4wencxl'));
               },
-              child: Text(
-                "Daftar Sekarang",
-                style: TextStyle(color: Colors.white),
-              ),
+              child: Text("Daftar Sekarang"),
             ),
           ],
         ),

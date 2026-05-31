@@ -15,7 +15,7 @@ List<CompetitionsModel> comps = [
     description:
         "link detail olim: https://www.instagram.com/p/DYdkciBEsIo/?igsh=eDhiaHNtemFkb3k0",
     deadline: "minggu 31 mei 2026",
-    link: "link pendaftaran: https://cbt.pusatprestasi.id",
+    linkPendaftaran: "cbt.pusatprestasi.id", linkPPath: '',
   ),
   CompetitionsModel(
     image: "assets/olimpiad2.jpeg",
@@ -23,7 +23,7 @@ List<CompetitionsModel> comps = [
     description:
         "link detail olim: https://www.instagram.com/p/DYedM0dEg9K/?igsh=dnlqcDhydXdneTE1",
     deadline: "14 - 31 mei 2026",
-    link: "link pendaftaran: https://linktr.ee/ISCOFFICIAL",
+    linkPendaftaran: "linktr.ee", linkPPath: '/ISCOFFICIAL',
   ),
   CompetitionsModel(
     image: "assets/olimpiad3.jpeg",
@@ -31,7 +31,7 @@ List<CompetitionsModel> comps = [
     description:
         "link detail olim: https://www.instagram.com/p/DYgR3s3Eimd/?igsh=MThudHNkNHYzNHlrbw==",
     deadline: "11 mei - 13 juni 2026",
-    link: "link pendaftaran: https://bit.ly/4wencxl",
+    linkPendaftaran: "bit.ly", linkPPath: '/4wencxl',
   ),
   CompetitionsModel(
     image: "assets/olimpiad4.jpeg",
@@ -39,7 +39,7 @@ List<CompetitionsModel> comps = [
     description:
         "link detail olim: https://www.instagram.com/p/DYmfJvjy0jb/?igsh=NGZwM293OG1kN2w=",
     deadline: "16 mei - 5 juni 2026",
-    link: "bit.lu/REGISTRASINUTCASENE16",
+    linkPendaftaran: "bit.lu/REGISTRASINUTCASENE16", linkPPath: '/REGISTRASINUTCASENE16',
   ),
   CompetitionsModel(
     image: "assets/olimpiad5.jpeg",
@@ -47,7 +47,7 @@ List<CompetitionsModel> comps = [
     description:
         "link detail olim: https://www.instagram.com/p/DX84Br6Er5t/?igsh=MTVveTBwN3c5dGgxZw==",
     deadline: "minggu 17 mei 2026",
-    link: "link pendaftaran: https://cbt.pusatprestasi.id",
+    linkPendaftaran: "cbt.pusatprestasi.id", linkPPath: '',
   ),
   CompetitionsModel(
     image: "assets/olimpiad6.jpeg",
@@ -55,7 +55,7 @@ List<CompetitionsModel> comps = [
     description:
         "link detail olim: https://www.instagram.com/p/DYLlM2Ukjld/?igsh=aGhrOTQ0cTM2Zzl4",
     deadline: "minggu 24 mei 2026",
-    link: "link pendaftaran: https://cbt.pusatprestasi.id",
+    linkPendaftaran: "cbt.pusatprestasi.id", linkPPath: '',
   ),
   CompetitionsModel(
     image: "assets/olimppiad7.jpeg",
@@ -63,7 +63,7 @@ List<CompetitionsModel> comps = [
     description:
         "link detail olim: https://www.instagram.com/p/DYMBRg5Ei4R/?igsh=MXViZXVhZ3prbmdyYg==",
     deadline: "gelombang 1: 27 april- 3 mei 2026",
-    link: "link pendaftaran: https://taplink.cc/kompas2026",
+    linkPendaftaran: "taplink.cc", linkPPath: '/kompas2026',
   ),
 ];
 

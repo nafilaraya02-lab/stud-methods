@@ -115,7 +115,7 @@ class _RayaHomepageState extends State<RayaHomepage> {
                           context,
                           MaterialPageRoute(
                             builder: (context) =>
-                                SubjectDetail(subjects: subjects[index]),
+                                SubjectDetail(subject: subjects[index]),
                           ),
                         ).then((value) {
                           setState(() {});
@@ -140,7 +140,8 @@ class _RayaHomepageState extends State<RayaHomepage> {
               itemBuilder: (BuildContext context, index) {
                 return CompetitionsWidget(
                   comps: comps[index],
-                  onTap: () {            Navigator.push(
+                  onTap: () {
+                    Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) =>

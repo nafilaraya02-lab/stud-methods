@@ -3,7 +3,9 @@ import 'package:studmethods/models/schedule_model.dart';
 
 class ScheduleWidget extends StatelessWidget {
   final ScheduleModel sches;
-  const ScheduleWidget({super.key, required this.sches});
+  final VoidCallback onTap;
+
+  const ScheduleWidget({super.key, required this.sches, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -31,17 +33,20 @@ class ScheduleWidget extends StatelessWidget {
             ],
           ),
           SizedBox(width: 10),
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-            decoration: BoxDecoration(
-              color: Colors.blue,
-              borderRadius: BorderRadius.circular(15),
-            ),
-            child: Text(
-              "Completed",
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
+          GestureDetector(
+            onTap: onTap,
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+              decoration: BoxDecoration(
+                color: sches.isCompleted ? Colors.blue : Colors.red,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Text(
+              sches.status == "Completed" ? "Completed" : "Pending",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ),
