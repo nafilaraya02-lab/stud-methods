@@ -1,13 +1,10 @@
-import 'package:flutter/cupertino.dart';
-
 class CivPengaturanModel {
   final String title;
-  final IconData icon;
-  final String subtitle;
+  final String description;
 
   CivPengaturanModel({
     required this.title,
-    required this.icon,
-    required this.subtitle,
+    required this.description,
+
   });
 }

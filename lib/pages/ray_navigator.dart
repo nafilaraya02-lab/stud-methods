@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:studmethods/pages/pengaturan.dart';
 import 'package:studmethods/pages/raya_homepage.dart';
 import 'package:studmethods/pages/schedule_page.dart';
-import 'package:studmethods/pages/settings.dart';
 
 class RayNavigator extends StatefulWidget {
   const RayNavigator({super.key});
@@ -16,7 +16,7 @@ class _RayNavigatorState extends State<RayNavigator> {
   Map<int, List<dynamic>> pages2 = {
     0: [RayaHomepage(), "Home", Icons.home],
     1: [SchedulePage(), "To-Do", Icons.library_add],
-    2: [Settings(), "Settings", Icons.settings],
+    2: [Pengaturan(), "Settings", Icons.settings],
   };
 
   @override

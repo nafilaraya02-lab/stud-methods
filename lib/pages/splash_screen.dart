@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:studmethods/pages/auth/civa_login.dart';
+import 'package:studmethods/pages/auth/Login.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

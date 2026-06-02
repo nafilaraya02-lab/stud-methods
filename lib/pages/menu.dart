@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:studmethods/models/menu_model.dart';
+import 'package:studmethods/pages/pengaturan.dart';
 import 'package:studmethods/pages/raya_homepage.dart';
 import 'package:studmethods/pages/schedule_page.dart';
-import 'package:studmethods/pages/settings.dart';
 
 class Menu extends StatefulWidget {
   const Menu({super.key});
@@ -28,7 +28,7 @@ class _MenuState extends State<Menu> {
       color: Colors.white70,
     ),
     2: MenuModel(
-      page: Settings(),
+      page: Pengaturan(),
       icon: Icons.settings,
       label: "Settings",
       color: Colors.white70,

@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:studmethods/services/civ_service_pengaturan.dart';
-import 'civ_pengaturan_page.dart';
-
-class Settings extends StatefulWidget {
-  const Settings({super.key});
+class Pengaturan extends StatefulWidget {
+  const Pengaturan({super.key});
 
   @override
-  State<Settings> createState() => _SettingsState();
+  State<Pengaturan> createState() => _PengaturanState();
 }
 
-class _SettingsState extends State<Settings> {
+class _PengaturanState extends State<Pengaturan> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("PENGATURAN", style: TextStyle(color: Colors.blueGrey)),
+        title: Text("SIFA", style: TextStyle(color: Colors.blueGrey)),
         flexibleSpace: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -24,13 +22,13 @@ class _SettingsState extends State<Settings> {
         ),
       ),
       body: ListView.builder(
-        itemCount: siv.length,
+        itemCount: rbn.length,
         itemBuilder: (context, i) => ListTile(
           onTap: () {
             showDetailInfo(context, i);
           },
-          title: Text(siv[i].title),
-
+          title: Text(rbn[i].title),
+          subtitle: Text(rbn[i].description),
         ),
       ),
     );
@@ -57,22 +55,21 @@ class _SettingsState extends State<Settings> {
                 ),
                 SizedBox(height: 20),
                 SizedBox(
-                  height: 200,
+                  height: 290,
                   child: SingleChildScrollView(
                     scrollDirection: Axis.vertical,
                     child: Column(
                       children: [
                         Text(
-                          siv[i].title,
+                          rbn[i].title,
                           style: TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(height: 20),
-                        Icon(siv[i].icon),
-                        SizedBox(height: 20),
-                        Text(siv[i].subtitle),
+                        SizedBox(height: 10),
+                        Text(rbn[i].description),
+                        SizedBox(height: 10),
                       ],
                     ),
                   ),

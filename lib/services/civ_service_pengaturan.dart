@@ -1,25 +1,23 @@
-import 'package:flutter/material.dart';
 import 'package:studmethods/models/civ_pengaturan_model.dart';
 
-List<CivPengaturanModel> siv = [
+List<CivPengaturanModel> rbn = [
   CivPengaturanModel(
-    title: 'Tema',
-    icon: Icons.text_fields,
-    subtitle: 'ATUR TEMA',
+    title: 'TEMA',
+    description:
+    'LAYAR BERANDA,'
+        'LAYAR KUNCI,'
+        'DAN WALPAPER',
   ),
   CivPengaturanModel(
-    title: 'Colors',
-    icon: Icons.color_lens_outlined,
-    subtitle: 'MERUBAH WARNA',
-  ),
-  CivPengaturanModel(
-    title: 'Pasword',
-    icon: Icons.color_lens_outlined,
-    subtitle: 'RUBAH PASSWORD ',
+    title: 'Color',
+    description:
+    'Ganti warna task,'
+        'Ganti warna background',
   ),
   CivPengaturanModel(
     title: 'Bantuan',
-    icon: Icons.help,
-    subtitle: 'MINTA BANTUAN KEPADA KAMI',
-  )
+    description:
+    'AKUN GOOGLE,'
+        'Keamanan',
+  ),
 ];
