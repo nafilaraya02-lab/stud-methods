@@ -12,7 +12,7 @@ class _PengaturanState extends State<Pengaturan> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("SIFA", style: TextStyle(color: Colors.blueGrey)),
+        title: Text("PENGATURAN", style: TextStyle(color: Colors.blueGrey)),
         flexibleSpace: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -25,7 +25,7 @@ class _PengaturanState extends State<Pengaturan> {
         itemCount: rbn.length,
         itemBuilder: (context, i) => ListTile(
           onTap: () {
-            showDetailInfo(context, i);
+            ShowDetail(context, i);
           },
           title: Text(rbn[i].title),
           subtitle: Text(rbn[i].description),
@@ -34,7 +34,7 @@ class _PengaturanState extends State<Pengaturan> {
     );
   }
 
-  void showDetailInfo(BuildContext context, int i) {
+  void ShowDetail(BuildContext context, int i) {
     showModalBottomSheet(
       context: context,
       builder: (context) {
